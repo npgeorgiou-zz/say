@@ -1,0 +1,41 @@
+# TODO: Utilize pipes more?
+
+# TODO: Think more abt that. Already implemented but conversions are awkward.
+#<?php
+#    $foo = toSay($bar->toNative() + 1);
+#    echo(123);
+#?>
+
+# TODO: Fizz buzz solutions
+#(macro series -> [chunk[1], chunk[2], 'fizz', chunk[4], 'buzz'])
+#(each [1..10].chunk{5} as chunk
+#    sayNL macro series
+#)
+#(each [1..10].chunk{5} as chunk
+#    sayNL [chunk[1], chunk[2], 'fizz', chunk[4], 'buzz']
+#)
+# TODO: Inf as extending Number, negative infinity, negative infinite arrays
+# TODO: String interpolation for more than variables? 'bar is: {foo.bar(1,2)}'
+# TODO: Lazy map/filter so that [1..inf] can also use maps and filters? ALso lazy evaluation good for speed.
+# TODO : checking types
+# TODO: ways to remove first/last item from array/map, or by index
+
+# TODO: macro tests
+#(macro foobar -> say 'foo' say 'bar')
+#(macro announce {arr} finally {close} -> (each arr as item sayNL 'THIS IS: item') sayNL close)
+#(macro unless {test} do {body} -> if test=false then sayNL body)
+#(macro foreach {foo} unless {test} do {body} -> each foo as item if test=false then body)
+#array << [1..10]
+#(macro foobar)
+#(macro announce array finally 'DONE')
+#(if true then macro unless 1=2 do 'foo')
+#(macro foreach array unless 1=2 do sayNL 'bar')
+
+# TODO: Reducing
+#[1,2,3,4,5].reduce(it, acc -> it + acc, 0)
+#[1,2,3,4,5].reduce($, acc -> $ + acc, 0)
+
+
+
+
+

@@ -1,0 +1,1105 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "shuffled"
+    },
+    "expression" : {
+      "type" : "MethodCall",
+      "object" : {
+        "type" : "Array",
+        "range" : null,
+        "infinite" : null,
+        "start" : null,
+        "end" : null,
+        "values" : [ {
+          "type" : "Int",
+          "value" : 1
+        }, {
+          "type" : "Int",
+          "value" : 2
+        } ]
+      },
+      "identifier" : {
+        "type" : "Identifier",
+        "id" : "shuffle"
+      },
+      "args" : [ ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "random"
+    },
+    "expression" : {
+      "type" : "MethodCall",
+      "object" : {
+        "type" : "Array",
+        "range" : null,
+        "infinite" : null,
+        "start" : null,
+        "end" : null,
+        "values" : [ {
+          "type" : "Int",
+          "value" : 1
+        }, {
+          "type" : "Int",
+          "value" : 2
+        } ]
+      },
+      "identifier" : {
+        "type" : "Identifier",
+        "id" : "random"
+      },
+      "args" : [ ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$arrayTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Prefix",
+        "operator" : "!",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 1
+            } ]
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Array",
+          "range" : true,
+          "infinite" : null,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : {
+            "type" : "Int",
+            "value" : 5
+          },
+          "values" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 5
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Array",
+          "range" : true,
+          "infinite" : null,
+          "start" : {
+            "type" : "Int",
+            "value" : 5
+          },
+          "end" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "values" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 5
+          }, {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 1
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Array",
+          "range" : true,
+          "infinite" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : null,
+          "values" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : true,
+          "infinite" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : null,
+          "values" : null
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ]
+        },
+        "operator" : "!=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 0
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          },
+          "operator" : "&",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            }, {
+              "type" : "Int",
+              "value" : 5
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 5
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          },
+          "operator" : "union",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 4
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          },
+          "operator" : "intersection",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          },
+          "operator" : "difference",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "+",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 6
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "-",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 10
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 5
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "*",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 24
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "/",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 5
+            }, {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 2.5
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "&",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Str",
+              "value" : "foo"
+            }, {
+              "type" : "Str",
+              "value" : "bar"
+            }, {
+              "type" : "Str",
+              "value" : "baz"
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "foobarbaz"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "and",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Bool",
+              "value" : true
+            }, {
+              "type" : "Bool",
+              "value" : false
+            }, {
+              "type" : "Bool",
+              "value" : true
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Postfix",
+          "operator" : "or",
+          "expression" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Bool",
+              "value" : true
+            }, {
+              "type" : "Bool",
+              "value" : false
+            }, {
+              "type" : "Bool",
+              "value" : true
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "size"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 5
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "unique"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 4
+          } ]
+        }
+      }, {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "If",
+            "test" : {
+              "type" : "Bool",
+              "value" : false
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 1
+            } ],
+            "elseStatements" : [ {
+              "type" : "Int",
+              "value" : 3
+            } ]
+          } ]
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "contains"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 3
+        } ]
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            }, {
+              "type" : "Int",
+              "value" : 5
+            } ]
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "chunk"
+          },
+          "args" : [ {
+            "type" : "Int",
+            "value" : 2
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          }, {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          }, {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 5
+            } ]
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "indexOf"
+          },
+          "args" : [ {
+            "type" : "Int",
+            "value" : 2
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 2
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "shuffled"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          }
+        },
+        "operator" : "or",
+        "right" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "shuffled"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 1
+            } ]
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "random"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "or",
+        "right" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "random"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 2
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$arrayTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,43 @@
+# Test Array operations
+shuffled << [1,2].shuffle:
+random << [1,2].random:
+
+$arrayTests << [
+    ![1,2,3] = [3,2,1],
+
+    # Comparisons
+    ([1,2,3] = [1,2,3]),    # Explicit
+    [1..5] = [1,2,3,4,5],   # Range
+    [5..1] = [5,4,3,2,1],   # Reverse Range
+    [1..inf] = [1..inf],    # Infinity
+    [1,2,3] != [0,2,3],     # Not Equals
+
+    # Set operations
+    [1,2,3] & [3,4,5] = [1,2,3,3,4,5],
+    [1,2,3] union [3,4]            = [1,2,3,4],
+    [1,2,3] intersection [2,3,3,4] = [2,3],
+    [1,1,2,3] difference [2,3,3,4] = [1],
+
+    # Reducing operators
+    [1,2,3]+ = 6,
+    [10,2,3]- = 5,
+    [1,2,3,4]* = 24,
+    [5,2]/ = 2.5,
+    ['foo', 'bar', 'baz']& = 'foobarbaz',
+    [true, false, true]and = false,
+    [true, false, true]or = true,
+
+    # Own functions
+    [1,2,3,3,4].size: = 5,
+    [1,2,3,3,4].unique: = [1,2,3,4],
+    [1, if false then 1 else 3].contains:[3],
+    [1,2,3,4,5].chunk:[2] = [[1,2], [3,4], [5]],
+    [1,2,2].indexOf:[2] = 2,
+    shuffled = [1,2] or shuffled = [2,1],
+    random = 1 or random = 2,
+]
+
+
+(each $arrayTests as $test
+    if $test = true then say '.'.green: else say 'x'.red:
+)

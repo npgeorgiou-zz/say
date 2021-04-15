@@ -1,0 +1,139 @@
+import 'lib.say.php'
+
+# Given two cards, a and b, return their sum.
+# 11 should be converted to a 1 to prevent the sum from exceeding 21.
+@black_jack_adder << (a, b ->
+        # TODO: junctions
+#        if  $  =  ('J' or 'Q' or 'K')
+#        if (a and b) = 'A'
+    (if a = 'A' and b = 'A' then a << 1)
+
+    safe << [a,b]
+        map (if $ = 'J' or $ = 'Q' or $ = 'K' then 10 else $)
+        map (if $ = 'A' then 1 else $)
+
+    return safe+
+)
+
+assert_equals:[@black_jack_adder:[1, 1], 2]
+assert_equals:[@black_jack_adder:['A', 1], 2]
+assert_equals:[@black_jack_adder:['J', 1], 11]
+assert_equals:[@black_jack_adder:['Q', 'K'], 20]
+
+
+# You're programming a backgammon game, and are working on the dice roll method.
+# Given two ints, return their sum. However, if the two numbers are the same, return double their sum.
+@roll_result << (a, b ->
+    return if (a != b) then a+b else a*b
+)
+assert_equals:[@roll_result:[1,2], 3]
+assert_equals:[@roll_result:[6,6], 36]
+
+
+# Given a number from 1 to 4 (inclusive), return a word representation of the number.
+# For example, given 2, return two. If the number is greater than 4, return the phrase too large.
+# If the number is less than 1, return the phrase too small.
+next_input << mockInput:[[1,3,2,5,4]]
+output << []
+converter << (number ->
+    # TODO: functions shouldn't know of anything outside their scope. Only closures.
+#    sayNL output
+    mapping << ['1' -> 'one', '2' -> 'two', '3' -> 'three', '4' -> 'four']
+
+    (if !mapping.hasKey:[number] then return 'too large')
+    return mapping[number]
+)
+
+output[next] << converter:[next_input:]
+output[next] << converter:[next_input:]
+output[next] << converter:[next_input:]
+output[next] << converter:[next_input:]
+output[next] << converter:[next_input:]
+assert_equals:[output, ['one', 'three', 'two', 'too large', 'four']]
+
+
+# You're the captain of a pirate ship and would like to calculate whether your trip was a success.
+# You are given two parameters - gold and pirates.
+# The trip is a success if there is at least as much gold as pirates.
+# However, if gold + pirates > 100, then the trip is a failure, since the ship may sink.
+# Return true if the ship was a success and false if it was a failure.
+trip_is_successful << (gold, pirates -> return gold >= pirates and !(gold + pirates > 100))
+assert_equals:[trip_is_successful:[10, 11], false]
+assert_equals:[trip_is_successful:[10, 10], true]
+assert_equals:[trip_is_successful:[10, 9], true]
+assert_equals:[trip_is_successful:[50, 51], false]
+
+
+# As a captain of a pirate ship, calculate the state of the ship. There are two parameters: gold and pirates.
+# If there's less gold than pirates, that's always bad.
+# If there's at least as much gold as pirates, that's good (even though the gold cannot be divided equally).
+# If the gold can be divided by the pirates equally, that's great.
+# However, if gold + pirates > 100, that's always bad since the ship may sink.
+# Return an int corresponding to the state of the ship, according to the following:
+# 0 - Bad
+# 1 - Good
+# 2 - Great
+ship_state << (gold, pirates ->
+    return if gold < pirates or gold + pirates > 100 then 0
+       else if gold % pirates = 0 then 2
+       else 1
+)
+
+assert_equals:[ship_state:[10, 11], 0]
+assert_equals:[ship_state:[51, 50], 0]
+assert_equals:[ship_state:[50, 50], 2]
+assert_equals:[ship_state:[70, 30], 1]
+
+
+# You are working on an app to calculate tips.
+# Given 2 ints: a, for the purchase amount in cents, and b, for the quality of service received,
+# can you calculate the tip in cents? Round the answer down to the nearest cent.
+# Calculate the tip according to the following table:
+# Quality	Percent
+# 1	        5%
+# 2	        10%
+# 3	        15%
+# 4	        20%
+# 5	        25%
+
+quality_to_tip% << [
+    '1' -> 5%,
+    '2' -> 10%,
+    '3' -> 15%,
+    '4' -> 20%,
+    '5' -> 25%,
+]
+calculate_tip << (quality, price -> return price * quality_to_tip%[quality])
+assert_equals:[calculate_tip:[1, 1000], 50]
+assert_equals:[calculate_tip:[2, 1000], 100]
+assert_equals:[calculate_tip:[3, 1000], 150]
+assert_equals:[calculate_tip:[4, 1000], 200]
+assert_equals:[calculate_tip:[5, 1000], 250]
+
+
+# You are given a certain number of nickels and pennies and a desired sum of cents.
+# Is it possible to select the exact change to reach that sum?
+# You will be given three numbers as input - nickels, pennies and sum.
+# Return true if you can select coins to reach sum exactly, and false otherwise.
+# A nickel is worth 5 cents. A penny is worth 1 cent.
+can_form_amount << (nickels, pennies, amount ->
+    nickels_to_use << (amount / 5).roundDown:
+    (if nickels < nickels_to_use then nickels_to_use << nickels)
+    left << amount - nickels_to_use * 5
+
+    (if left = 0 then return true)
+    return pennies >= left
+)
+assert_equals:[can_form_amount:[2, 1, 11], true]
+assert_equals:[can_form_amount:[2, 1, 12], false]
+assert_equals:[can_form_amount:[1, 6, 11], true]
+assert_equals:[can_form_amount:[1, 6, 12], false]
+
+
+# The Kingdom of Zumbania recently banned the number 7.
+# Please print all the numbers from 1 to 20 but skip all multiples of 7.
+# Also, skip any number that has a 7 in it, such as 17.
+# TODO: Make [] optione for only one arg: $.contains:7
+assert_equals:[[1..20] except ($ /? 7 or $.contains:[7]), [1,2,3,4,5,6,8,9,10,11,12,13,15,16,18,19,20]]
+
+

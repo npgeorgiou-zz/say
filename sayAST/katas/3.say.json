@@ -1,0 +1,890 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Import",
+    "path" : "lib.say.php"
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "expected"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz1617fizz19buzzfizz2223fizzbuzz26fizz2829fizzbuzz3132fizz34buzzfizz3738fizzbuzz41fizz4344fizzbuzz4647fizz49buzzfizz5253fizzbuzz56fizz5859fizzbuzz6162fizz64buzzfizz6768fizzbuzz71fizz7374fizzbuzz7677fizz79buzzfizz8283fizzbuzz86fizz8889fizzbuzz9192fizz94buzzfizz9798fizzbuzz"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : ""
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 100
+      },
+      "values" : null
+    },
+    "valueAlias" : null,
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "ImpliedVariable"
+          },
+          "operator" : "/?",
+          "right" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "and",
+        "right" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "ImpliedVariable"
+          },
+          "operator" : "/?",
+          "right" : {
+            "type" : "Int",
+            "value" : 5
+          }
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "operator" : "<<&",
+        "right" : {
+          "type" : "Str",
+          "value" : "fizzbuzz"
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "ImpliedVariable"
+          },
+          "operator" : "/?",
+          "right" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "actual"
+          },
+          "operator" : "<<&",
+          "right" : {
+            "type" : "Str",
+            "value" : "fizz"
+          }
+        } ],
+        "elseStatements" : [ {
+          "type" : "If",
+          "test" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 5
+            }
+          },
+          "thenStatements" : [ {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "actual"
+            },
+            "operator" : "<<&",
+            "right" : {
+              "type" : "Str",
+              "value" : "buzz"
+            }
+          } ],
+          "elseStatements" : [ {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "actual"
+            },
+            "operator" : "<<&",
+            "right" : {
+              "type" : "MethodCall",
+              "object" : {
+                "type" : "ImpliedVariable"
+              },
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "toString"
+              },
+              "args" : [ ]
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "expected"
+    }, {
+      "type" : "Identifier",
+      "id" : "actual"
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : ""
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 100
+      },
+      "values" : null
+    },
+    "valueAlias" : null,
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "actual"
+      },
+      "operator" : "<<&",
+      "right" : {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 3
+            }
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 5
+            }
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Str",
+          "value" : "fizzbuzz"
+        } ],
+        "elseStatements" : [ {
+          "type" : "If",
+          "test" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 3
+            }
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "fizz"
+          } ],
+          "elseStatements" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "ImpliedVariable"
+              },
+              "operator" : "/?",
+              "right" : {
+                "type" : "Int",
+                "value" : 5
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Str",
+              "value" : "buzz"
+            } ],
+            "elseStatements" : [ {
+              "type" : "MethodCall",
+              "object" : {
+                "type" : "ImpliedVariable"
+              },
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "toString"
+              },
+              "args" : [ ]
+            } ]
+          } ]
+        } ]
+      }
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "expected"
+    }, {
+      "type" : "Identifier",
+      "id" : "actual"
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : ""
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 100
+      },
+      "values" : null
+    },
+    "valueAlias" : null,
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "ImpliedVariable"
+        },
+        "operator" : "/?",
+        "right" : {
+          "type" : "Int",
+          "value" : 3
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "operator" : "<<&",
+        "right" : {
+          "type" : "Str",
+          "value" : "fizz"
+        }
+      } ],
+      "elseStatements" : [ ]
+    }, {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "ImpliedVariable"
+        },
+        "operator" : "/?",
+        "right" : {
+          "type" : "Int",
+          "value" : 5
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "operator" : "<<&",
+        "right" : {
+          "type" : "Str",
+          "value" : "buzz"
+        }
+      } ],
+      "elseStatements" : [ ]
+    }, {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Prefix",
+          "operator" : "!",
+          "expression" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 3
+            }
+          }
+        },
+        "operator" : "and",
+        "right" : {
+          "type" : "Prefix",
+          "operator" : "!",
+          "expression" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "/?",
+            "right" : {
+              "type" : "Int",
+              "value" : 5
+            }
+          }
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "operator" : "<<&",
+        "right" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "ImpliedVariable"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toString"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ ]
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "expected"
+    }, {
+      "type" : "Identifier",
+      "id" : "actual"
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : ""
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 100
+      },
+      "values" : null
+    },
+    "valueAlias" : null,
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$map"
+      },
+      "expression" : {
+        "type" : "Map_",
+        "pairs" : [ {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "0"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "fizzbuzz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "3"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "fizz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "5"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "buzz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "6"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "fizz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "9"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "fizz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "10"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "buzz"
+          }
+        }, {
+          "type" : "MapPair",
+          "key" : {
+            "type" : "Str",
+            "value" : "12"
+          },
+          "value" : {
+            "type" : "Str",
+            "value" : "fizz"
+          }
+        } ]
+      }
+    }, {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "remainder"
+      },
+      "expression" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "ImpliedVariable"
+        },
+        "operator" : "%",
+        "right" : {
+          "type" : "Int",
+          "value" : 15
+        }
+      }
+    }, {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "actual"
+      },
+      "operator" : "<<&",
+      "right" : {
+        "type" : "If",
+        "test" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "hasKey"
+          },
+          "args" : [ {
+            "type" : "Identifier",
+            "id" : "remainder"
+          } ]
+        },
+        "thenStatements" : [ {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "indexes" : [ {
+            "type" : "Identifier",
+            "id" : "remainder"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        } ],
+        "elseStatements" : [ {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "ImpliedVariable"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toString"
+          },
+          "args" : [ ]
+        } ]
+      }
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "expected"
+    }, {
+      "type" : "Identifier",
+      "id" : "actual"
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "fizzer"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "fizz"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "buzzer"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "buzz"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "fizzbuzzer"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "fizzbuzz"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "number"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "n"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "n"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toString"
+          },
+          "args" : [ ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "loop"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "fizzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "buzzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "fizzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "fizzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "buzzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "fizzer"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "number"
+      }, {
+        "type" : "Identifier",
+        "id" : "fizzbuzzer"
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : ""
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "test"
+    },
+    "expression" : {
+      "type" : "MethodCall",
+      "object" : {
+        "type" : "Array",
+        "range" : true,
+        "infinite" : null,
+        "start" : {
+          "type" : "Int",
+          "value" : 1
+        },
+        "end" : {
+          "type" : "Int",
+          "value" : 100
+        },
+        "values" : null
+      },
+      "identifier" : {
+        "type" : "Identifier",
+        "id" : "chunk"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 15
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "test"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$chunk"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "Each",
+      "iterable" : {
+        "type" : "Identifier",
+        "id" : "$chunk"
+      },
+      "valueAlias" : {
+        "type" : "Identifier",
+        "id" : "$number"
+      },
+      "keyAlias" : {
+        "type" : "Identifier",
+        "id" : "$index"
+      },
+      "body" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "operator" : "<<&",
+        "right" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "IndexAccess",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "loop"
+            },
+            "indexes" : [ {
+              "type" : "Identifier",
+              "id" : "$index"
+            } ],
+            "range" : null,
+            "start" : null,
+            "end" : null
+          },
+          "args" : [ {
+            "type" : "Identifier",
+            "id" : "$number"
+          } ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "expected"
+    }, {
+      "type" : "Identifier",
+      "id" : "actual"
+    } ]
+  } ]
+}

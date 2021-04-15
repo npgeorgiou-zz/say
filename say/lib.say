@@ -1,0 +1,11 @@
+assert_equals << (actual, expected ->
+    if actual = expected then say '.'.green: else say 'x'.red:
+)
+
+mockInput << (array ->
+    return ( ->
+        # TODO: Implement some error
+#        if this.invocationCount > array.size: then
+        return array[this.invocationCount]
+    )
+)

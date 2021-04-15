@@ -1,0 +1,51 @@
+# Test Iterables index access
+$array << [1,2,3]
+$array[1] << 4
+$array[last] << 5
+$array[next] << 6
+
+$string << 'foobar'
+$string[1] << 'X'
+$string[last] << 'Z'
+$string[next] << 'A'
+
+$int << 66
+$int[1] << 1
+$int[last] << 2
+$int[next] << 3
+
+$indexAccessTests << [
+    $array = [4,2,5,6],
+    $array[1] = 4,
+    $array[first] = 4,
+    $array[last] = 6,
+    $array[2,3] = [2,5],
+    $array[1..3] = [4,2,5],
+    $array[2..] = [2,5,6],
+    $array[..3] = [4,2,5],
+    $string = 'XoobaZA',
+    $string[1] = 'X',
+    $string[first] = 'X',
+    $string[last] = 'A',
+    $string[2,3] = 'oo',
+    $string[1..4] = 'Xoob',
+    $string[2..] = 'oobaZA',
+    $string[..3] = 'Xoo',
+
+    $int = 123,
+    $int[1] = 1,
+    $int[first] = 1,
+    $int[last] = 3,
+    $int[2,3] = 23,
+    $int[1..3] = 123,
+    $int[2..] = 23,
+    $int[..3] = 123,
+
+    # Access index can be an expression
+    [10, 20][if 1=1 then 1 else 2] = 10,
+    'foo'[if 1=1 then 1 else 2] = 'f'
+]
+
+(each $indexAccessTests as $test
+  if $test = true then say '.'.green: else say 'x'.red:
+)

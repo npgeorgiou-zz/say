@@ -1,0 +1,39 @@
+varInScope << '!'
+fullName << (@first, @middle, @last ->
+    this.bucket[next] << 'foo'
+    return '@first @middle @last varInScope'
+)
+
+# Function as argument
+helloer << (name -> return 'Hello name')
+butler << (greeter, name -> return greeter:[name] & ' Do you want tea?')
+
+# Function as return value
+adder << (a -> return (b -> return a+b))
+addTo2 << adder:[2]
+
+result << 'martin luther king !'
+$functionTests << [
+    # Currying
+    fullName:['martin', 'luther', 'king'] = result,
+    fullName:['martin']:['luther', 'king'] = result,
+    fullName:['martin']:['luther']:['king'] = result,
+
+    fullName:[?, ?, 'king']:[?, 'luther']:['martin'] = result,
+    fullName:[?, ?, 'king']:['martin']:['luther'] = result,
+    fullName:['martin']:[?, 'king']:['luther'] = result,
+
+    # Invocation count and bucket
+    fullName.invocationCount = 6,
+    fullName.bucket = ['foo','foo','foo','foo','foo','foo'], # TODO: Macro #repeat 6 times 'foo'
+
+    # Functions as arguments
+    butler:[helloer, 'main.java.nikos'] = 'Hello main.java.nikos Do you want tea?',
+
+    # Functions as return value
+    addTo2:[4] = 6
+]
+
+(each $functionTests as $test
+   if $test = true then say '.'.green: else say 'x'.red:
+)

@@ -1,0 +1,122 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "expected"
+        }
+      } ],
+      "body" : [ {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "actual"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "expected"
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Say",
+          "expression" : {
+            "type" : "MethodCall",
+            "object" : {
+              "type" : "Str",
+              "value" : "."
+            },
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "green"
+            },
+            "args" : [ ]
+          }
+        } ],
+        "elseStatements" : [ {
+          "type" : "Say",
+          "expression" : {
+            "type" : "MethodCall",
+            "object" : {
+              "type" : "Str",
+              "value" : "x"
+            },
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "red"
+            },
+            "args" : [ ]
+          }
+        } ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "mockInput"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "array"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Function",
+          "params" : [ ],
+          "body" : [ {
+            "type" : "Return",
+            "expression" : {
+              "type" : "IndexAccess",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "array"
+              },
+              "indexes" : [ {
+                "type" : "PropertyAccess",
+                "object" : {
+                  "type" : "Identifier",
+                  "id" : "this"
+                },
+                "identifier" : {
+                  "type" : "Identifier",
+                  "id" : "invocationCount"
+                }
+              } ],
+              "range" : null,
+              "start" : null,
+              "end" : null
+            }
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

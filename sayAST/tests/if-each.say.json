@@ -1,0 +1,536 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$ifTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ],
+          "elseStatements" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "foo"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ],
+          "elseStatements" : [ {
+            "type" : "Str",
+            "value" : "bar"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "bar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ],
+          "elseStatements" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Bool",
+              "value" : true
+            },
+            "thenStatements" : [ {
+              "type" : "Str",
+              "value" : "bar"
+            } ],
+            "elseStatements" : [ {
+              "type" : "Str",
+              "value" : "baz"
+            } ]
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "foo"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ],
+          "elseStatements" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Bool",
+              "value" : true
+            },
+            "thenStatements" : [ {
+              "type" : "Str",
+              "value" : "bar"
+            } ],
+            "elseStatements" : [ {
+              "type" : "Str",
+              "value" : "baz"
+            } ]
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "bar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "thenStatements" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ],
+          "elseStatements" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Bool",
+              "value" : false
+            },
+            "thenStatements" : [ {
+              "type" : "Str",
+              "value" : "bar"
+            } ],
+            "elseStatements" : [ {
+              "type" : "Str",
+              "value" : "baz"
+            } ]
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "baz"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$ifTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Identifier",
+        "id" : "$test"
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : null
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "expected"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 10
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "values" : null
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 10
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "values" : null
+    },
+    "valueAlias" : null,
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "IndexAccess",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "indexes" : [ {
+          "type" : "Str",
+          "value" : "next"
+        } ],
+        "range" : null,
+        "start" : null,
+        "end" : null
+      },
+      "expression" : {
+        "type" : "ImpliedVariable"
+      }
+    } ]
+  }, {
+    "type" : "If",
+    "test" : {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "actual"
+      },
+      "operator" : "=",
+      "right" : {
+        "type" : "Identifier",
+        "id" : "expected"
+      }
+    },
+    "thenStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "."
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "green"
+        },
+        "args" : [ ]
+      }
+    } ],
+    "elseStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "x"
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "red"
+        },
+        "args" : [ ]
+      }
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : null
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 10
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "values" : null
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$n"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "IndexAccess",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "indexes" : [ {
+          "type" : "Str",
+          "value" : "next"
+        } ],
+        "range" : null,
+        "start" : null,
+        "end" : null
+      },
+      "expression" : {
+        "type" : "Identifier",
+        "id" : "$n"
+      }
+    } ]
+  }, {
+    "type" : "If",
+    "test" : {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "actual"
+      },
+      "operator" : "=",
+      "right" : {
+        "type" : "Identifier",
+        "id" : "expected"
+      }
+    },
+    "thenStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "."
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "green"
+        },
+        "args" : [ ]
+      }
+    } ],
+    "elseStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "x"
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "red"
+        },
+        "args" : [ ]
+      }
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "actual"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : null
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 10
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "values" : null
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$n"
+    },
+    "keyAlias" : {
+      "type" : "Identifier",
+      "id" : "$k"
+    },
+    "body" : [ {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "IndexAccess",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "actual"
+        },
+        "indexes" : [ {
+          "type" : "Str",
+          "value" : "next"
+        } ],
+        "range" : null,
+        "start" : null,
+        "end" : null
+      },
+      "expression" : {
+        "type" : "Identifier",
+        "id" : "$k"
+      }
+    } ]
+  }, {
+    "type" : "If",
+    "test" : {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "actual"
+      },
+      "operator" : "=",
+      "right" : {
+        "type" : "Array",
+        "range" : true,
+        "infinite" : null,
+        "start" : {
+          "type" : "Int",
+          "value" : 1
+        },
+        "end" : {
+          "type" : "Int",
+          "value" : 10
+        },
+        "values" : null
+      }
+    },
+    "thenStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "."
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "green"
+        },
+        "args" : [ ]
+      }
+    } ],
+    "elseStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "x"
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "red"
+        },
+        "args" : [ ]
+      }
+    } ]
+  } ]
+}

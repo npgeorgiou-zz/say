@@ -1,0 +1,135 @@
+import 'lib.say.php'
+
+
+# Write a program that asks the user for their name and greets them with their name.
+name << 'Bob'
+assert_equals:['Hello ' & name, 'Hello Bob']
+
+
+# Modify the previous program such that only the users Alice and Bob are greeted with their names.
+# TODO: Interpolate by {foo}, If I ask 'what your name', it tries to substitute name with var name, which does not exist yet.
+name << 'Bob'
+greeting << 'Hello ' & (if ['Alice', 'Bob'].contains:[name] then 'name' else '')
+assert_equals:[greeting, 'Hello Bob']
+
+
+# Write a program that asks the user for a number n and prints the sum of the numbers 1 to n.
+series << [1..100]
+
+assert_equals:[series+, 5050]
+assert_equals:[(series[first] + series[last]) * series.size:/2, 5050]
+
+sum << 0
+(each series sum <<+ $)
+assert_equals:[sum, 5050]
+
+summer << (a, b -> return a + b)
+(each [1..inf] if series.size: > 1 then series << series apply summer else break)
+assert_equals:[series[1], 5050]
+
+series << [1..100]
+(while series.size: > 1 do series << series apply summer)
+assert_equals:[series[1], 5050]
+# TODO: make a reduce function/operator
+
+
+# Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15
+series << [1..100]
+series << (series only $ % 3 = 0) union (series only $ % 5 = 0)
+assert_equals:[series+, 2418]
+
+
+# Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
+n << 100
+operation << 'products'
+
+result << (if operation = 'sums' then [1..n]+
+else if operation = 'products' then [1..n]*
+else 'wrong answer')
+assert_equals:[result, 9223372036854775807]
+
+
+# Write a program that prints a multiplication table up to 10.
+$table << [->]
+(each [1..10] as Multiplicand
+    $table[Multiplicand] << []
+
+    (each [1..10] as Multiplier
+        $table[Multiplicand][next] << Multiplicand * Multiplier
+    )
+)
+
+assert_equals:[$table, [
+                         '1' -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                         '2' -> [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+                         '3' -> [3, 6, 9, 12, 15, 18, 21, 24, 27, 30],
+                         '4' -> [4, 8, 12, 16, 20, 24, 28, 32, 36, 40],
+                         '5' -> [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+                         '6' -> [6, 12, 18, 24, 30, 36, 42, 48, 54, 60],
+                         '7' -> [7, 14, 21, 28, 35, 42, 49, 56, 63, 70],
+                         '8' -> [8, 16, 24, 32, 40, 48, 56, 64, 72, 80],
+                         '9' -> [9, 18, 27, 36, 45, 54, 63, 72, 81, 90],
+                         '10' -> [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+                     ]]
+
+
+# Write a program that prints all prime numbers until 10.
+isPrime << (n ->
+    (if n <= 1 then return false)
+
+    (each [2..n - 1] if n /? $ then return false)
+
+    return true
+)
+
+assert_equals:[[1..10] apply isPrime, [false,false,true,false,true,false,true,false,false,false]]
+
+
+# Write a program that prints the next 20 leap years.
+is_leap << (year ->
+    #4. The year is a leap year (it has 366 days).
+    step4 << (year -> return true)
+
+    #5. The year is not a leap year (it has 365 days).
+    step5 << (year -> return false)
+
+    #3. If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
+    step3 << (year -> return if year /? 400 then step4:[year] else step5:[year])
+
+    #2. If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
+    step2 << (year -> return if year /? 100 then step3:[year] else step4:[year])
+
+    #1. If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
+    step1 << (year -> return if year /? 4 then step2:[year] else step5:[year])
+
+    return step1:[year]
+)
+
+leap_years << []
+(each [2021..inf]
+    (if leap_years.size: = 10 then break)
+    if is_leap:[$] then leap_years[next] << $
+)
+
+
+# TODO: [2021..inf] filter is_leap[$] take 20
+assert_equals:[leap_years, [2024, 2028, 2032, 2036, 2040, 2044, 2048, 2052, 2056, 2060]]
+
+
+# Write a guessing game where the user has to guess a secret number.
+# After every guess the program tells the user whether their number was too large or too small.
+# At the end the number of tries needed should be printed. It counts only as one try if they input
+# the same number multiple times consecutively.
+input << mockInput:[[10, 80, 20, 20, 70, 60, 65, 66]]
+secret << 66
+tries << []
+
+(do
+    guess <<  input:
+    tries[next] << guess
+#    (if guess > secret then sayNL 'too big')
+#    (if guess < secret then sayNL 'too small')
+while guess != secret)
+assert_equals:[tries.unique:.size:, 7]
+
+##

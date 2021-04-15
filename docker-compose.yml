@@ -1,0 +1,25 @@
+version: "3"
+services:
+  parser:
+    build:
+      context: .
+      dockerfile: java/Dockerfile
+    working_dir: /home/parser
+    volumes:
+      - ./java/:/home/parser
+      - ./build/libs/:/home/parser/jar
+      - ./say:/home/parser/input
+      - ./sayAST/:/home/parser/output
+    command: "bash watch.sh"
+    tty: true
+  transpiler:
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    working_dir: /home/transpiler
+    volumes:
+      - ./php/:/home/transpiler
+      - ./sayAst/:/home/transpiler/input
+      - ./transpiled/:/home/transpiler/output
+    command: "bash watch.sh"
+#    tty: true

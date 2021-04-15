@@ -1,0 +1,34 @@
+# If tests
+$ifTests << [
+    # Returns last expression
+    (if true then 'foo') = 'foo',
+    (if false then 'foo' else 'bar') = 'bar',
+
+    # If test is false and there is no else body, returns false
+#    (if 1=2 then 'foo') = false,
+
+    # Can be chained
+    (if true then 'foo' else if true then 'bar' else 'baz') = 'foo',
+    (if false then 'foo' else if true then 'bar' else 'baz') = 'bar',
+    (if false then 'foo' else if false then 'bar' else 'baz') = 'baz'
+]
+(each $ifTests as $test
+   if $test then say '.'.green: else say 'x'.red:
+)
+
+# Each tests
+actual << []
+expected << [10..1]
+# Can use implicit variable
+(each [10..1] actual[next] << $)
+(if actual = expected then say '.'.green: else say 'x'.red:)
+
+# Can use named value
+actual << []
+(each [10..1] as $n actual[next] << $n)
+(if actual = expected then say '.'.green: else say 'x'.red:)
+
+# Can use named key
+actual << []
+(each [10..1] as $k -> $n actual[next] << $k)
+(if actual = [1..10] then say '.'.green: else say 'x'.red:)

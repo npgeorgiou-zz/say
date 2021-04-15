@@ -1,0 +1,861 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "filterTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : true,
+            "infinite" : null,
+            "start" : {
+              "type" : "Int",
+              "value" : 1
+            },
+            "end" : {
+              "type" : "Int",
+              "value" : 10
+            },
+            "values" : null
+          },
+          "operator" : "only",
+          "right" : {
+            "type" : "Function",
+            "params" : [ {
+              "type" : "FunctionParam",
+              "defaultValue" : null,
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "item"
+              }
+            } ],
+            "body" : [ {
+              "type" : "Return",
+              "expression" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Identifier",
+                  "id" : "item"
+                },
+                "operator" : ">",
+                "right" : {
+                  "type" : "Int",
+                  "value" : 5
+                }
+              }
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 6
+          }, {
+            "type" : "Int",
+            "value" : 7
+          }, {
+            "type" : "Int",
+            "value" : 8
+          }, {
+            "type" : "Int",
+            "value" : 9
+          }, {
+            "type" : "Int",
+            "value" : 10
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "except",
+          "right" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "ImpliedVariable"
+            },
+            "operator" : "=",
+            "right" : {
+              "type" : "Str",
+              "value" : "o"
+            }
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "fbar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 123456
+          },
+          "operator" : "only",
+          "right" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "ImpliedVariable"
+              },
+              "operator" : ">",
+              "right" : {
+                "type" : "Int",
+                "value" : 2
+              }
+            },
+            "operator" : "and",
+            "right" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "ImpliedVariable"
+              },
+              "operator" : "<",
+              "right" : {
+                "type" : "Int",
+                "value" : 6
+              }
+            }
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 345
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "a"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "foo"
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "b"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "bar"
+              }
+            } ]
+          },
+          "operator" : "except",
+          "right" : {
+            "type" : "Function",
+            "params" : [ {
+              "type" : "FunctionParam",
+              "defaultValue" : null,
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "item"
+              }
+            } ],
+            "body" : [ {
+              "type" : "Assignment",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "x"
+              },
+              "expression" : {
+                "type" : "Str",
+                "value" : "bar"
+              }
+            }, {
+              "type" : "Return",
+              "expression" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Identifier",
+                  "id" : "item"
+                },
+                "operator" : "=",
+                "right" : {
+                  "type" : "Str",
+                  "value" : "foo"
+                }
+              }
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "b"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "bar"
+            }
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "filterTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "array"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : true,
+      "infinite" : null,
+      "start" : {
+        "type" : "Int",
+        "value" : 1
+      },
+      "end" : {
+        "type" : "Int",
+        "value" : 5
+      },
+      "values" : null
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "mapTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : true,
+            "infinite" : null,
+            "start" : {
+              "type" : "Int",
+              "value" : 1
+            },
+            "end" : {
+              "type" : "Int",
+              "value" : 5
+            },
+            "values" : null
+          },
+          "operator" : "map",
+          "right" : {
+            "type" : "Function",
+            "params" : [ {
+              "type" : "FunctionParam",
+              "defaultValue" : null,
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "item"
+              }
+            } ],
+            "body" : [ {
+              "type" : "Return",
+              "expression" : {
+                "type" : "MethodCall",
+                "object" : {
+                  "type" : "Identifier",
+                  "id" : "item"
+                },
+                "identifier" : {
+                  "type" : "Identifier",
+                  "id" : "toString"
+                },
+                "args" : [ ]
+              }
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "1"
+          }, {
+            "type" : "Str",
+            "value" : "2"
+          }, {
+            "type" : "Str",
+            "value" : "3"
+          }, {
+            "type" : "Str",
+            "value" : "4"
+          }, {
+            "type" : "Str",
+            "value" : "5"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "map",
+          "right" : {
+            "type" : "Function",
+            "params" : [ {
+              "type" : "FunctionParam",
+              "defaultValue" : null,
+              "identifier" : {
+                "type" : "Identifier",
+                "id" : "$item"
+              }
+            } ],
+            "body" : [ {
+              "type" : "Return",
+              "expression" : {
+                "type" : "If",
+                "test" : {
+                  "type" : "Infix",
+                  "left" : {
+                    "type" : "Identifier",
+                    "id" : "$item"
+                  },
+                  "operator" : "=",
+                  "right" : {
+                    "type" : "Str",
+                    "value" : "o"
+                  }
+                },
+                "thenStatements" : [ {
+                  "type" : "Str",
+                  "value" : "x"
+                } ],
+                "elseStatements" : [ {
+                  "type" : "Str",
+                  "value" : "$item"
+                } ]
+              }
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "fxxbar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 123456
+          },
+          "operator" : "map",
+          "right" : {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "ImpliedVariable"
+              },
+              "operator" : "<",
+              "right" : {
+                "type" : "Int",
+                "value" : 3
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 0
+            } ],
+            "elseStatements" : [ {
+              "type" : "ImpliedVariable"
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 3456
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "a"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "foo"
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "b"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "barz"
+              }
+            } ]
+          },
+          "operator" : "map",
+          "right" : {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "MethodCall",
+                "object" : {
+                  "type" : "ImpliedVariable"
+                },
+                "identifier" : {
+                  "type" : "Identifier",
+                  "id" : "size"
+                },
+                "args" : [ ]
+              },
+              "operator" : "=",
+              "right" : {
+                "type" : "Int",
+                "value" : 3
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Str",
+              "value" : "x"
+            } ],
+            "elseStatements" : [ {
+              "type" : "ImpliedVariable"
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "a"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "x"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "b"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "barz"
+            }
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "mapTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "add"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "a"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "b"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "a"
+          },
+          "operator" : "+",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "b"
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "concat"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "a"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "b"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "a b"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "applyTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 1
+            }, {
+              "type" : "Int",
+              "value" : 2
+            }, {
+              "type" : "Int",
+              "value" : 3
+            }, {
+              "type" : "Int",
+              "value" : 4
+            } ]
+          },
+          "operator" : "apply",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "add"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 3
+          }, {
+            "type" : "Int",
+            "value" : 7
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Str",
+              "value" : "mickey"
+            }, {
+              "type" : "Str",
+              "value" : "mouse"
+            }, {
+              "type" : "Str",
+              "value" : "donald"
+            }, {
+              "type" : "Str",
+              "value" : "duck"
+            }, {
+              "type" : "Str",
+              "value" : "foo"
+            } ]
+          },
+          "operator" : "apply",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "concat"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "mickey mouse"
+          }, {
+            "type" : "Str",
+            "value" : "donald duck"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "applyTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  } ]
+}

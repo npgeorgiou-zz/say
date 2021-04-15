@@ -1,0 +1,58 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'antlr'
+    id 'idea'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    antlr "org.antlr:antlr4:4.9.1"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.8'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.8'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.8'
+}
+
+jar {
+    archiveName 'parser.jar'
+    manifest {
+        attributes(
+                'Main-Class': 'nikos.MainClass',
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+application {
+    mainClass = "nikos.MainClass"
+}
+
+generateGrammarSource {
+    maxHeapSize = "128m"
+    arguments += ['-visitor', '-no-listener']
+}
+
+sourceSets {
+    generated {
+        java.srcDir 'generated-src/antlr/main/'
+    }
+}
+
+compileJava.source sourceSets.generated.java, sourceSets.main.java
+
+idea {
+    module {
+        sourceDirs += file("generated-src/antlr/main/")
+    }
+}

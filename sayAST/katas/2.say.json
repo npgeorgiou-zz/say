@@ -1,0 +1,1676 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Import",
+    "path" : "lib.say.php"
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "@black_jack_adder"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "a"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "b"
+        }
+      } ],
+      "body" : [ {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "a"
+            },
+            "operator" : "=",
+            "right" : {
+              "type" : "Str",
+              "value" : "A"
+            }
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "b"
+            },
+            "operator" : "=",
+            "right" : {
+              "type" : "Str",
+              "value" : "A"
+            }
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Assignment",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "a"
+          },
+          "expression" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        } ],
+        "elseStatements" : [ ]
+      }, {
+        "type" : "Assignment",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "safe"
+        },
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Array",
+              "range" : null,
+              "infinite" : null,
+              "start" : null,
+              "end" : null,
+              "values" : [ {
+                "type" : "Identifier",
+                "id" : "a"
+              }, {
+                "type" : "Identifier",
+                "id" : "b"
+              } ]
+            },
+            "operator" : "map",
+            "right" : {
+              "type" : "If",
+              "test" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Infix",
+                  "left" : {
+                    "type" : "Infix",
+                    "left" : {
+                      "type" : "ImpliedVariable"
+                    },
+                    "operator" : "=",
+                    "right" : {
+                      "type" : "Str",
+                      "value" : "J"
+                    }
+                  },
+                  "operator" : "or",
+                  "right" : {
+                    "type" : "Infix",
+                    "left" : {
+                      "type" : "ImpliedVariable"
+                    },
+                    "operator" : "=",
+                    "right" : {
+                      "type" : "Str",
+                      "value" : "Q"
+                    }
+                  }
+                },
+                "operator" : "or",
+                "right" : {
+                  "type" : "Infix",
+                  "left" : {
+                    "type" : "ImpliedVariable"
+                  },
+                  "operator" : "=",
+                  "right" : {
+                    "type" : "Str",
+                    "value" : "K"
+                  }
+                }
+              },
+              "thenStatements" : [ {
+                "type" : "Int",
+                "value" : 10
+              } ],
+              "elseStatements" : [ {
+                "type" : "ImpliedVariable"
+              } ]
+            }
+          },
+          "operator" : "map",
+          "right" : {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "ImpliedVariable"
+              },
+              "operator" : "=",
+              "right" : {
+                "type" : "Str",
+                "value" : "A"
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 1
+            } ],
+            "elseStatements" : [ {
+              "type" : "ImpliedVariable"
+            } ]
+          }
+        }
+      }, {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Postfix",
+          "operator" : "+",
+          "expression" : {
+            "type" : "Identifier",
+            "id" : "safe"
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@black_jack_adder"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 1
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 2
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@black_jack_adder"
+      },
+      "args" : [ {
+        "type" : "Str",
+        "value" : "A"
+      }, {
+        "type" : "Int",
+        "value" : 1
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 2
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@black_jack_adder"
+      },
+      "args" : [ {
+        "type" : "Str",
+        "value" : "J"
+      }, {
+        "type" : "Int",
+        "value" : 1
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 11
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@black_jack_adder"
+      },
+      "args" : [ {
+        "type" : "Str",
+        "value" : "Q"
+      }, {
+        "type" : "Str",
+        "value" : "K"
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 20
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "@roll_result"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "a"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "b"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "a"
+            },
+            "operator" : "!=",
+            "right" : {
+              "type" : "Identifier",
+              "id" : "b"
+            }
+          },
+          "thenStatements" : [ {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "a"
+            },
+            "operator" : "+",
+            "right" : {
+              "type" : "Identifier",
+              "id" : "b"
+            }
+          } ],
+          "elseStatements" : [ {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "a"
+            },
+            "operator" : "*",
+            "right" : {
+              "type" : "Identifier",
+              "id" : "b"
+            }
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@roll_result"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 2
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 3
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "@roll_result"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 6
+      }, {
+        "type" : "Int",
+        "value" : 6
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 36
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "next_input"
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "mockInput"
+      },
+      "args" : [ {
+        "type" : "Array",
+        "range" : null,
+        "infinite" : null,
+        "start" : null,
+        "end" : null,
+        "values" : [ {
+          "type" : "Int",
+          "value" : 1
+        }, {
+          "type" : "Int",
+          "value" : 3
+        }, {
+          "type" : "Int",
+          "value" : 2
+        }, {
+          "type" : "Int",
+          "value" : 5
+        }, {
+          "type" : "Int",
+          "value" : 4
+        } ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "output"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : null
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "converter"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "number"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Assignment",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "mapping"
+        },
+        "expression" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "1"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "one"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "2"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "two"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "3"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "three"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "4"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "four"
+            }
+          } ]
+        }
+      }, {
+        "type" : "If",
+        "test" : {
+          "type" : "Prefix",
+          "operator" : "!",
+          "expression" : {
+            "type" : "MethodCall",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "mapping"
+            },
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "hasKey"
+            },
+            "args" : [ {
+              "type" : "Identifier",
+              "id" : "number"
+            } ]
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Return",
+          "expression" : {
+            "type" : "Str",
+            "value" : "too large"
+          }
+        } ],
+        "elseStatements" : [ ]
+      }, {
+        "type" : "Return",
+        "expression" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "mapping"
+          },
+          "indexes" : [ {
+            "type" : "Identifier",
+            "id" : "number"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "output"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "converter"
+      },
+      "args" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "next_input"
+        },
+        "args" : [ ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "output"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "converter"
+      },
+      "args" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "next_input"
+        },
+        "args" : [ ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "output"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "converter"
+      },
+      "args" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "next_input"
+        },
+        "args" : [ ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "output"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "converter"
+      },
+      "args" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "next_input"
+        },
+        "args" : [ ]
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "output"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "converter"
+      },
+      "args" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "next_input"
+        },
+        "args" : [ ]
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Identifier",
+      "id" : "output"
+    }, {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Str",
+        "value" : "one"
+      }, {
+        "type" : "Str",
+        "value" : "three"
+      }, {
+        "type" : "Str",
+        "value" : "two"
+      }, {
+        "type" : "Str",
+        "value" : "too large"
+      }, {
+        "type" : "Str",
+        "value" : "four"
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "trip_is_successful"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "gold"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "pirates"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "gold"
+            },
+            "operator" : ">=",
+            "right" : {
+              "type" : "Identifier",
+              "id" : "pirates"
+            }
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Prefix",
+            "operator" : "!",
+            "expression" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Identifier",
+                  "id" : "gold"
+                },
+                "operator" : "+",
+                "right" : {
+                  "type" : "Identifier",
+                  "id" : "pirates"
+                }
+              },
+              "operator" : ">",
+              "right" : {
+                "type" : "Int",
+                "value" : 100
+              }
+            }
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "trip_is_successful"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 10
+      }, {
+        "type" : "Int",
+        "value" : 11
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : false
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "trip_is_successful"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 10
+      }, {
+        "type" : "Int",
+        "value" : 10
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : true
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "trip_is_successful"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 10
+      }, {
+        "type" : "Int",
+        "value" : 9
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : true
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "trip_is_successful"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 50
+      }, {
+        "type" : "Int",
+        "value" : 51
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : false
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "ship_state"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "gold"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "pirates"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "If",
+          "test" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Identifier",
+                "id" : "gold"
+              },
+              "operator" : "<",
+              "right" : {
+                "type" : "Identifier",
+                "id" : "pirates"
+              }
+            },
+            "operator" : "or",
+            "right" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Identifier",
+                  "id" : "gold"
+                },
+                "operator" : "+",
+                "right" : {
+                  "type" : "Identifier",
+                  "id" : "pirates"
+                }
+              },
+              "operator" : ">",
+              "right" : {
+                "type" : "Int",
+                "value" : 100
+              }
+            }
+          },
+          "thenStatements" : [ {
+            "type" : "Int",
+            "value" : 0
+          } ],
+          "elseStatements" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Infix",
+                "left" : {
+                  "type" : "Identifier",
+                  "id" : "gold"
+                },
+                "operator" : "%",
+                "right" : {
+                  "type" : "Identifier",
+                  "id" : "pirates"
+                }
+              },
+              "operator" : "=",
+              "right" : {
+                "type" : "Int",
+                "value" : 0
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 2
+            } ],
+            "elseStatements" : [ {
+              "type" : "Int",
+              "value" : 1
+            } ]
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "ship_state"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 10
+      }, {
+        "type" : "Int",
+        "value" : 11
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 0
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "ship_state"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 51
+      }, {
+        "type" : "Int",
+        "value" : 50
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 0
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "ship_state"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 50
+      }, {
+        "type" : "Int",
+        "value" : 50
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 2
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "ship_state"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 70
+      }, {
+        "type" : "Int",
+        "value" : 30
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 1
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "quality_to_tip%"
+    },
+    "expression" : {
+      "type" : "Map_",
+      "pairs" : [ {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "1"
+        },
+        "value" : {
+          "type" : "Dec",
+          "value" : 0.05
+        }
+      }, {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "2"
+        },
+        "value" : {
+          "type" : "Dec",
+          "value" : 0.1
+        }
+      }, {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "3"
+        },
+        "value" : {
+          "type" : "Dec",
+          "value" : 0.15
+        }
+      }, {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "4"
+        },
+        "value" : {
+          "type" : "Dec",
+          "value" : 0.2
+        }
+      }, {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "5"
+        },
+        "value" : {
+          "type" : "Dec",
+          "value" : 0.25
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "calculate_tip"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "quality"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "price"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "price"
+          },
+          "operator" : "*",
+          "right" : {
+            "type" : "IndexAccess",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "quality_to_tip%"
+            },
+            "indexes" : [ {
+              "type" : "Identifier",
+              "id" : "quality"
+            } ],
+            "range" : null,
+            "start" : null,
+            "end" : null
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "calculate_tip"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 1000
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 50
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "calculate_tip"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 2
+      }, {
+        "type" : "Int",
+        "value" : 1000
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 100
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "calculate_tip"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 3
+      }, {
+        "type" : "Int",
+        "value" : 1000
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 150
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "calculate_tip"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 4
+      }, {
+        "type" : "Int",
+        "value" : 1000
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 200
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "calculate_tip"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 5
+      }, {
+        "type" : "Int",
+        "value" : 1000
+      } ]
+    }, {
+      "type" : "Int",
+      "value" : 250
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "can_form_amount"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "nickels"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "pennies"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "amount"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Assignment",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "nickels_to_use"
+        },
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "amount"
+            },
+            "operator" : "/",
+            "right" : {
+              "type" : "Int",
+              "value" : 5
+            }
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "roundDown"
+          },
+          "args" : [ ]
+        }
+      }, {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "nickels"
+          },
+          "operator" : "<",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "nickels_to_use"
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Assignment",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "nickels_to_use"
+          },
+          "expression" : {
+            "type" : "Identifier",
+            "id" : "nickels"
+          }
+        } ],
+        "elseStatements" : [ ]
+      }, {
+        "type" : "Assignment",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "left"
+        },
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "amount"
+          },
+          "operator" : "-",
+          "right" : {
+            "type" : "Infix",
+            "left" : {
+              "type" : "Identifier",
+              "id" : "nickels_to_use"
+            },
+            "operator" : "*",
+            "right" : {
+              "type" : "Int",
+              "value" : 5
+            }
+          }
+        }
+      }, {
+        "type" : "If",
+        "test" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "left"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 0
+          }
+        },
+        "thenStatements" : [ {
+          "type" : "Return",
+          "expression" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        } ],
+        "elseStatements" : [ ]
+      }, {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "pennies"
+          },
+          "operator" : ">=",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "left"
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "can_form_amount"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 2
+      }, {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 11
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : true
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "can_form_amount"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 2
+      }, {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 12
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : false
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "can_form_amount"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 6
+      }, {
+        "type" : "Int",
+        "value" : 11
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : true
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "can_form_amount"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 6
+      }, {
+        "type" : "Int",
+        "value" : 12
+      } ]
+    }, {
+      "type" : "Bool",
+      "value" : false
+    } ]
+  }, {
+    "type" : "FunctionCall",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "assert_equals"
+    },
+    "args" : [ {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Array",
+        "range" : true,
+        "infinite" : null,
+        "start" : {
+          "type" : "Int",
+          "value" : 1
+        },
+        "end" : {
+          "type" : "Int",
+          "value" : 20
+        },
+        "values" : null
+      },
+      "operator" : "except",
+      "right" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "ImpliedVariable"
+          },
+          "operator" : "/?",
+          "right" : {
+            "type" : "Int",
+            "value" : 7
+          }
+        },
+        "operator" : "or",
+        "right" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "ImpliedVariable"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "contains"
+          },
+          "args" : [ {
+            "type" : "Int",
+            "value" : 7
+          } ]
+        }
+      }
+    }, {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 2
+      }, {
+        "type" : "Int",
+        "value" : 3
+      }, {
+        "type" : "Int",
+        "value" : 4
+      }, {
+        "type" : "Int",
+        "value" : 5
+      }, {
+        "type" : "Int",
+        "value" : 6
+      }, {
+        "type" : "Int",
+        "value" : 8
+      }, {
+        "type" : "Int",
+        "value" : 9
+      }, {
+        "type" : "Int",
+        "value" : 10
+      }, {
+        "type" : "Int",
+        "value" : 11
+      }, {
+        "type" : "Int",
+        "value" : 12
+      }, {
+        "type" : "Int",
+        "value" : 13
+      }, {
+        "type" : "Int",
+        "value" : 15
+      }, {
+        "type" : "Int",
+        "value" : 16
+      }, {
+        "type" : "Int",
+        "value" : 18
+      }, {
+        "type" : "Int",
+        "value" : 19
+      }, {
+        "type" : "Int",
+        "value" : 20
+      } ]
+    } ]
+  } ]
+}

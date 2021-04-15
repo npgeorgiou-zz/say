@@ -1,0 +1,2828 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$comparisonTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : ""
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Dec",
+            "value" : 0.0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : ""
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Int",
+            "value" : 2
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Int",
+            "value" : 0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Str",
+            "value" : "true"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "false"
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Str",
+            "value" : "1"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "1.1"
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Dec",
+            "value" : 1.1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 1.1
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Dec",
+            "value" : 1.1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Str",
+            "value" : "foo"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Str",
+            "value" : ""
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Int",
+            "value" : 0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "kinda",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$comparisonTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$stringTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Prefix",
+        "operator" : "!",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Str",
+            "value" : "oof"
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "&",
+          "right" : {
+            "type" : "Str",
+            "value" : "barbaz"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "foobarbarbaz"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Str",
+            "value" : "foo"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Str",
+            "value" : "bar"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Str",
+            "value" : "bar"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "aaaa"
+          },
+          "operator" : ">",
+          "right" : {
+            "type" : "Str",
+            "value" : "aaa"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "aaa"
+          },
+          "operator" : ">=",
+          "right" : {
+            "type" : "Str",
+            "value" : "aaa"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "aaa"
+          },
+          "operator" : "<=",
+          "right" : {
+            "type" : "Str",
+            "value" : "aaaa"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "aaa"
+          },
+          "operator" : "<=",
+          "right" : {
+            "type" : "Str",
+            "value" : "aaa"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "union",
+          "right" : {
+            "type" : "Str",
+            "value" : "barbaz"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "fobarz"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "intersection",
+          "right" : {
+            "type" : "Str",
+            "value" : "barbaz"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "bar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "operator" : "difference",
+          "right" : {
+            "type" : "Str",
+            "value" : "barbaz"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "fo"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "1.23"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "size"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 4
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "fooba"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "chunk"
+          },
+          "args" : [ {
+            "type" : "Int",
+            "value" : 2
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "fo"
+          }, {
+            "type" : "Str",
+            "value" : "ob"
+          }, {
+            "type" : "Str",
+            "value" : "a"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "1.23"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toNumber"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 1.23
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "0"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toNumber"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 0
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "contains"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "b"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "replace"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "o"
+          }, {
+            "type" : "Str",
+            "value" : "a"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "faabar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "shuffle"
+          },
+          "args" : [ ]
+        },
+        "operator" : "!=",
+        "right" : {
+          "type" : "Str",
+          "value" : "foobar"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "startsWith"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "endsWith"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "bar"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "foobar"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "split"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "o"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "f"
+          }, {
+            "type" : "Str",
+            "value" : "bar"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$stringTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$numberTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : -1
+          },
+          "operator" : "+",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 0
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 1.2
+          },
+          "operator" : "-",
+          "right" : {
+            "type" : "Dec",
+            "value" : 1.1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 0.1
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "operator" : "*",
+          "right" : {
+            "type" : "Dec",
+            "value" : -3.1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : -6.2
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 6.1
+          },
+          "operator" : "/",
+          "right" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 2.0333333333
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 5.1
+          },
+          "operator" : "%",
+          "right" : {
+            "type" : "Dec",
+            "value" : 2.2
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 0.7
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Int",
+            "value" : -1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 3.3
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Dec",
+            "value" : 3.3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 3
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Dec",
+            "value" : 3.0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 3.0
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "operator" : ">",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "operator" : ">=",
+          "right" : {
+            "type" : "Dec",
+            "value" : 2.0
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 1.9999
+          },
+          "operator" : "<",
+          "right" : {
+            "type" : "Int",
+            "value" : 2
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "operator" : "<=",
+          "right" : {
+            "type" : "Int",
+            "value" : 1
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : 0.1
+          },
+          "operator" : "+",
+          "right" : {
+            "type" : "Dec",
+            "value" : 0.2
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 0.3
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Dec",
+            "value" : -0.1
+          },
+          "operator" : "+",
+          "right" : {
+            "type" : "Dec",
+            "value" : 0.2
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Dec",
+          "value" : 0.1
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Int",
+            "value" : 123
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toString"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "123"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Dec",
+            "value" : 1.23
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "toString"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "1.23"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Dec",
+            "value" : 1.23
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "roundDown"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 1
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Dec",
+            "value" : 1.23
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "roundUp"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 2
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$numberTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$integerTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Prefix",
+        "operator" : "!",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 123
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Int",
+            "value" : 321
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 123
+          },
+          "operator" : "union",
+          "right" : {
+            "type" : "Int",
+            "value" : 345
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 12345
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1223
+          },
+          "operator" : "intersection",
+          "right" : {
+            "type" : "Int",
+            "value" : 3345
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 3
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Int",
+            "value" : 1223
+          },
+          "operator" : "difference",
+          "right" : {
+            "type" : "Int",
+            "value" : 3345
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 12
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Int",
+            "value" : 123
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "size"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 3
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$integerTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$booleanTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Prefix",
+        "operator" : "!",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "!=",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "and",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "or",
+          "right" : {
+            "type" : "Bool",
+            "value" : true
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : true
+          },
+          "operator" : "or",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Bool",
+            "value" : false
+          },
+          "operator" : "or",
+          "right" : {
+            "type" : "Bool",
+            "value" : false
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : false
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$booleanTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$array"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Int",
+        "value" : 1
+      }, {
+        "type" : "Int",
+        "value" : 2
+      }, {
+        "type" : "Int",
+        "value" : 3
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$array"
+      },
+      "indexes" : [ {
+        "type" : "Int",
+        "value" : 1
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 4
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$array"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "last"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 5
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$array"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 6
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$string"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "foobar"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$string"
+      },
+      "indexes" : [ {
+        "type" : "Int",
+        "value" : 1
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "X"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$string"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "last"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "Z"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$string"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "A"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$int"
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 66
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$int"
+      },
+      "indexes" : [ {
+        "type" : "Int",
+        "value" : 1
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 1
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$int"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "last"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 2
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$int"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "next"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 3
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$indexAccessTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$array"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 5
+          }, {
+            "type" : "Int",
+            "value" : 6
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 1
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 4
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "first"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 4
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "last"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 6
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 5
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 5
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 5
+          }, {
+            "type" : "Int",
+            "value" : 6
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$array"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : null,
+          "end" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 4
+          }, {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 5
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$string"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "XoobaZA"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 1
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "X"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "first"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "X"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "last"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "A"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "oo"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : {
+            "type" : "Int",
+            "value" : 4
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "Xoob"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "oobaZA"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$string"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : null,
+          "end" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "Xoo"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$int"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 123
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 1
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 1
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "first"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 1
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "last"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 3
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 2
+          }, {
+            "type" : "Int",
+            "value" : 3
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 23
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 1
+          },
+          "end" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 123
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : {
+            "type" : "Int",
+            "value" : 2
+          },
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 23
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$int"
+          },
+          "indexes" : [ ],
+          "range" : true,
+          "start" : null,
+          "end" : {
+            "type" : "Int",
+            "value" : 3
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 123
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Array",
+            "range" : null,
+            "infinite" : null,
+            "start" : null,
+            "end" : null,
+            "values" : [ {
+              "type" : "Int",
+              "value" : 10
+            }, {
+              "type" : "Int",
+              "value" : 20
+            } ]
+          },
+          "indexes" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Int",
+                "value" : 1
+              },
+              "operator" : "=",
+              "right" : {
+                "type" : "Int",
+                "value" : 1
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 1
+            } ],
+            "elseStatements" : [ {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 10
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Str",
+            "value" : "foo"
+          },
+          "indexes" : [ {
+            "type" : "If",
+            "test" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Int",
+                "value" : 1
+              },
+              "operator" : "=",
+              "right" : {
+                "type" : "Int",
+                "value" : 1
+              }
+            },
+            "thenStatements" : [ {
+              "type" : "Int",
+              "value" : 1
+            } ],
+            "elseStatements" : [ {
+              "type" : "Int",
+              "value" : 2
+            } ]
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "f"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$indexAccessTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  } ]
+}

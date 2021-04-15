@@ -1,0 +1,38 @@
+# filtering
+filterTests << [
+    ([1..10] only item -> return item > 5) = [6,7,8,9,10],
+    ('foobar' except $ = 'o') = 'fbar',
+    (123456 only $ > 2 and $ < 6) = 345,
+    (['a'->'foo', 'b'-> 'bar'] except item -> x << 'bar' return item = 'foo') = ['b'->'bar'],
+]
+
+(each filterTests as test
+    if test = true then say '.'.green: else say 'x'.red:
+)
+
+
+# mapping
+array << [1..5]
+mapTests << [
+    ([1..5] map item -> return item.toString:) = ['1','2','3','4','5'],
+    ('foobar' map $item -> return if $item = 'o' then 'x' else '$item') = 'fxxbar',
+    (123456 map if $ < 3 then 0 else $) = 3456,
+    (['a'->'foo', 'b'-> 'barz'] map if $.size: = 3 then 'x' else $) = ['a'->'x', 'b'-> 'barz']
+]
+
+(each mapTests as test
+    if test = true then say '.'.green: else say 'x'.red:
+)
+
+# applying
+add << (a, b -> return a+b)
+concat << (a, b -> return 'a b')
+applyTests << [
+    ([1,2,3,4] apply add) = [3, 7],
+    (['mickey', 'mouse', 'donald', 'duck', 'foo'] apply concat) = ['mickey mouse', 'donald duck', 'foo'],
+]
+
+(each applyTests as test
+    if test = true then say '.'.green: else say 'x'.red:
+)
+##

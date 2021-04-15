@@ -1,0 +1,41 @@
+$map << ['a'-> 'tuna', 'b'-> 'bacon']
+$map['a'] << 'burger'
+$map['c'] << 'salad'
+
+$mapTests << [
+    #Reverse
+    !$map = ['c'-> 'salad', 'b'-> 'bacon', 'a'-> 'burger'],
+
+    # Comparisons
+    $map = ['a'-> 'burger', 'b'-> 'bacon', 'c'-> 'salad'],
+    $map != ['a'-> 'burger'],
+
+    # Set operations
+    $map & ['a'-> 1,'c'-> 3] = ['a'-> 1, 'b'-> 'bacon', 'c'-> 3],
+    ['b'-> 2, 'c'-> 3, 'z'->10] & $map = ['b'-> 'bacon', 'c'-> 'salad', 'z'->10, 'a'-> 'burger'],
+
+    # Functions
+    $map.size: = 3,
+    $map.keys: = ['a', 'b', 'c'],
+    $map.values: = ['burger', 'bacon', 'salad'],
+    $map.hasKey:['a'] = true,
+    $map.hasValue:['burger'] = true,
+    $map.hasPair:['a', 'burger'] = true,
+    ['a'-> 1,'b'-> 2,'c'-> 1].values:.unique: = [1,2],
+
+    # Index access
+    $map['a'] = 'burger',
+    $map[first] = 'burger',
+    $map[last] = 'salad',
+    $map['b', 'c'] = ['bacon', 'salad'],
+    ['1' -> 'one'][1] = 'one' # Can use ints to access index too
+]
+
+(each $mapTests as $test
+   if $test = true then say '.'.green: else say 'x'.red:
+)
+
+# Iterable
+count << 0
+(each $map as $k->$v count << count + 1)
+if count = 3 then say '.'.green: else say 'x'.red:

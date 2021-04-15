@@ -1,0 +1,93 @@
+import 'lib.say.php'
+
+
+# Write a program that prints the numbers from 1 through 100.
+# But for multiples of 3 print “Fizz” instead of the number
+# and for the multiples of 5 print “Buzz”.
+# For numbers which are multiples of both 3 and 5 print “FizzBuzz”.
+expected << '12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz1617fizz19buzzfizz2223fizzbuzz26fizz2829fizzbuzz3132fizz34buzzfizz3738fizzbuzz41fizz4344fizzbuzz4647fizz49buzzfizz5253fizzbuzz56fizz5859fizzbuzz6162fizz64buzzfizz6768fizzbuzz71fizz7374fizzbuzz7677fizz79buzzfizz8283fizzbuzz86fizz8889fizzbuzz9192fizz94buzzfizz9798fizzbuzz'
+
+actual << ''
+(each [1..100]
+    if $ /? 3 and $ /? 5 then actual <<& 'fizzbuzz' else
+    if $ /? 3 then actual <<& 'fizz' else
+    if $ /? 5 then actual <<& 'buzz' else actual <<& $.toString:
+)
+assert_equals:[expected, actual]
+
+actual << ''
+(each [1..100]
+    actual <<&
+    if $ /? 3 and $ /? 5 then 'fizzbuzz' else
+    if $ /? 3 then 'fizz' else
+    if $ /? 5 then 'buzz' else $.toString:
+)
+assert_equals:[expected, actual]
+
+actual << ''
+(each [1..100]
+    (if $ /? 3 then actual <<& 'fizz')
+    (if $ /? 5 then actual <<& 'buzz')
+    (if !($ /? 3) and !($ /? 5) then actual <<& $.toString:)
+)
+assert_equals:[expected, actual]
+
+actual << ''
+(each [1..100]
+    $map << [
+        '0' -> 'fizzbuzz',
+        '3' -> 'fizz',
+        '5' -> 'buzz',
+        '6' -> 'fizz',
+        '9' -> 'fizz',
+        '10' -> 'buzz',
+        '12' -> 'fizz',
+    ]
+
+    remainder << $ % 15
+    actual <<& if $map.hasKey:[remainder] then $map[remainder] else $.toString:
+)
+assert_equals:[expected, actual]
+
+fizzer << ( -> return 'fizz')
+buzzer << ( -> return 'buzz')
+fizzbuzzer << ( -> return 'fizzbuzz')
+number << ( n -> return n.toString:)
+loop << [number,number,fizzer,number,buzzer,fizzer,number,number,fizzer,buzzer,number,fizzer,number,number,fizzbuzzer]
+actual << ''
+test << [1..100].chunk:[15]
+# TODO: make this work
+#(each [1..100].chunk:[15] sayNL $)
+(each test as $chunk
+    (each $chunk as $index -> $number
+        actual <<& loop[$index]:[$number]
+    )
+)
+assert_equals:[expected, actual]
+
+
+##
+
+
+
+# TODO: Add them as tests somewhere
+s << ''
+i1 << 1
+i2 << 1
+i3 << 1
+i4 << 1
+
+s <<& 'foo'
+i1 <<+ 1
+i2 <<- 1
+i3 <<* 4
+i4 <</ 2
+
+assert_equals:[s, 'foo']
+assert_equals:[i1, 2 ]
+assert_equals:[i2, 0 ]
+assert_equals:[i3, 4 ]
+assert_equals:[i4, 0.5]
+
+
+##

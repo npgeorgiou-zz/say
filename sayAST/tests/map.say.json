@@ -1,0 +1,844 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$map"
+    },
+    "expression" : {
+      "type" : "Map_",
+      "pairs" : [ {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "a"
+        },
+        "value" : {
+          "type" : "Str",
+          "value" : "tuna"
+        }
+      }, {
+        "type" : "MapPair",
+        "key" : {
+          "type" : "Str",
+          "value" : "b"
+        },
+        "value" : {
+          "type" : "Str",
+          "value" : "bacon"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$map"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "a"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "burger"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "IndexAccess",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "$map"
+      },
+      "indexes" : [ {
+        "type" : "Str",
+        "value" : "c"
+      } ],
+      "range" : null,
+      "start" : null,
+      "end" : null
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "salad"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$mapTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Prefix",
+        "operator" : "!",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "operator" : "=",
+          "right" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "c"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "salad"
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "b"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "bacon"
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "a"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "burger"
+              }
+            } ]
+          }
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$map"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "a"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "burger"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "b"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "bacon"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "c"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "salad"
+            }
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$map"
+        },
+        "operator" : "!=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "a"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "burger"
+            }
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "operator" : "&",
+          "right" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "a"
+              },
+              "value" : {
+                "type" : "Int",
+                "value" : 1
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "c"
+              },
+              "value" : {
+                "type" : "Int",
+                "value" : 3
+              }
+            } ]
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "a"
+            },
+            "value" : {
+              "type" : "Int",
+              "value" : 1
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "b"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "bacon"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "c"
+            },
+            "value" : {
+              "type" : "Int",
+              "value" : 3
+            }
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "b"
+              },
+              "value" : {
+                "type" : "Int",
+                "value" : 2
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "c"
+              },
+              "value" : {
+                "type" : "Int",
+                "value" : 3
+              }
+            }, {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "z"
+              },
+              "value" : {
+                "type" : "Int",
+                "value" : 10
+              }
+            } ]
+          },
+          "operator" : "&",
+          "right" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Map_",
+          "pairs" : [ {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "b"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "bacon"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "c"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "salad"
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "z"
+            },
+            "value" : {
+              "type" : "Int",
+              "value" : 10
+            }
+          }, {
+            "type" : "MapPair",
+            "key" : {
+              "type" : "Str",
+              "value" : "a"
+            },
+            "value" : {
+              "type" : "Str",
+              "value" : "burger"
+            }
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "size"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 3
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "keys"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "a"
+          }, {
+            "type" : "Str",
+            "value" : "b"
+          }, {
+            "type" : "Str",
+            "value" : "c"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "values"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "burger"
+          }, {
+            "type" : "Str",
+            "value" : "bacon"
+          }, {
+            "type" : "Str",
+            "value" : "salad"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "hasKey"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "a"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "hasValue"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "burger"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "hasPair"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "a"
+          }, {
+            "type" : "Str",
+            "value" : "burger"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "MethodCall",
+            "object" : {
+              "type" : "Map_",
+              "pairs" : [ {
+                "type" : "MapPair",
+                "key" : {
+                  "type" : "Str",
+                  "value" : "a"
+                },
+                "value" : {
+                  "type" : "Int",
+                  "value" : 1
+                }
+              }, {
+                "type" : "MapPair",
+                "key" : {
+                  "type" : "Str",
+                  "value" : "b"
+                },
+                "value" : {
+                  "type" : "Int",
+                  "value" : 2
+                }
+              }, {
+                "type" : "MapPair",
+                "key" : {
+                  "type" : "Str",
+                  "value" : "c"
+                },
+                "value" : {
+                  "type" : "Int",
+                  "value" : 1
+                }
+              } ]
+            },
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "values"
+            },
+            "args" : [ ]
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "unique"
+          },
+          "args" : [ ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Int",
+            "value" : 1
+          }, {
+            "type" : "Int",
+            "value" : 2
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "a"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "burger"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "first"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "burger"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "last"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "salad"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "$map"
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "b"
+          }, {
+            "type" : "Str",
+            "value" : "c"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "bacon"
+          }, {
+            "type" : "Str",
+            "value" : "salad"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "Map_",
+            "pairs" : [ {
+              "type" : "MapPair",
+              "key" : {
+                "type" : "Str",
+                "value" : "1"
+              },
+              "value" : {
+                "type" : "Str",
+                "value" : "one"
+              }
+            } ]
+          },
+          "indexes" : [ {
+            "type" : "Int",
+            "value" : 1
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "one"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$mapTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "count"
+    },
+    "expression" : {
+      "type" : "Int",
+      "value" : 0
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$map"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$v"
+    },
+    "keyAlias" : {
+      "type" : "Identifier",
+      "id" : "$k"
+    },
+    "body" : [ {
+      "type" : "Assignment",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "count"
+      },
+      "expression" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "count"
+        },
+        "operator" : "+",
+        "right" : {
+          "type" : "Int",
+          "value" : 1
+        }
+      }
+    } ]
+  }, {
+    "type" : "If",
+    "test" : {
+      "type" : "Infix",
+      "left" : {
+        "type" : "Identifier",
+        "id" : "count"
+      },
+      "operator" : "=",
+      "right" : {
+        "type" : "Int",
+        "value" : 3
+      }
+    },
+    "thenStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "."
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "green"
+        },
+        "args" : [ ]
+      }
+    } ],
+    "elseStatements" : [ {
+      "type" : "Say",
+      "expression" : {
+        "type" : "MethodCall",
+        "object" : {
+          "type" : "Str",
+          "value" : "x"
+        },
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "red"
+        },
+        "args" : [ ]
+      }
+    } ]
+  } ]
+}

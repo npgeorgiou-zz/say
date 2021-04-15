@@ -1,0 +1,183 @@
+$comparisonTests << [
+    'foo'=true  = false,
+    'foo'=1     = false,
+    ''=0.0      = false,
+    ''=false    = false,
+    false=0     = false,
+    true=1      = false,
+
+    1!=2         = true,
+    'foo'!=1     = true,
+    'foo'!=false = true,
+    'foo'!=true  = true,
+    true!=1      = true,
+    false!=0     = true,
+
+    true kinda 'true' = true,
+    'false' kinda false = true,
+    1 kinda '1' = true,
+    '1.1' kinda 1.1 = true,
+    1.1 kinda 1.1 = true,
+    'foo' kinda 'foo' = true,
+    false kinda false = true,
+    false kinda '' = false,
+    false kinda 0 = false,
+    true kinda 1 = false,
+]
+(each $comparisonTests as $test if $test = true then say '.'.green: else say 'x'.red:)
+
+$stringTests << [
+     # Operators
+     !'foo' = 'oof',
+    'foobar' & 'barbaz'            = 'foobarbarbaz',
+
+    # Comparisons
+    'foo'='foo' = true,
+    'foo'!='bar' = true,
+    'foo'='bar' = false,
+    'aaaa'>'aaa' = true,
+    'aaa'>='aaa' = true,
+    'aaa'<='aaaa' = true,
+    'aaa'<='aaa' = true,
+
+    # Set operations
+    'foobar' union 'barbaz'        = 'fobarz',
+    'foobar' intersection 'barbaz' = 'bar',
+    'foobar' difference 'barbaz'   = 'fo',
+
+    # functions
+    '1.23'.size: = 4,
+    'fooba'.chunk:[2] = ['fo', 'ob', 'a'],
+    '1.23'.toNumber: = 1.23,
+    '0'.toNumber: = 0,
+    'foobar'.contains:['b'] = true,
+    'foobar'.replace:['o', 'a'] = 'faabar',
+    'foobar'.shuffle: != 'foobar',
+    'foobar'.startsWith:['foo'] = true,
+    'foobar'.endsWith:['bar'] = true,
+    'foobar'.split:['o'] = ['f', 'bar'],
+]
+(each $stringTests as $test
+    if $test = true then say '.'.green: else say 'x'.red:
+)
+
+$numberTests << [
+    # Math
+    -1 + 1 = 0,
+    1.2 - 1.1 = 0.1,
+    2* -3.1 = -6.2,
+    6.1/3 = 2.0333333333,
+    5.1 % 2.2 = 0.7,
+
+    # Comparisons
+    1=1         = true,
+    1 != -1     = true,
+    3.3=3.3     = true,
+    3=3.0       = true,
+    3.0=3       = true,
+    2>1 = true,
+    2>=2.0 = true,
+    1.9999<2 = true,
+    1<=1 = true,
+
+    # Numbers can be expressed as %
+    10% + 20% = 0.3,
+    -10% + 20% = 0.1,
+
+    # Own functions
+    123.toString: = '123',
+    1.23.toString: = '1.23',
+    1.23.roundDown: = 1,
+    1.23.roundUp: = 2,
+]
+(each $numberTests as $test
+    if $test = true then say '.'.green: else say 'x'.red:
+)
+
+$integerTests << [
+    # Operators
+    !123 = 321,
+
+    # Set operations
+    123 union 345          = 12345,
+    1223 intersection 3345 = 3,
+    1223 difference 3345   = 12,
+
+    # Own functions
+    123.size: = 3,
+]
+(each $integerTests as $test
+    if $test = true then say '.'.green: else say 'x'.red:
+)
+
+$booleanTests << [
+    # Operators
+    !true = false,
+
+    # Comparisons
+    true=true   = true,
+    true!=true   = false,
+    true!=false  = true,
+
+    # Boolean math
+    (true and true)   = true,
+    (true and false)  = false,
+    (false and false) = false,
+    (true or true)   = true,
+    (true or false)  = true,
+    (false or false) = false,
+]
+(each $booleanTests as $test
+    if $test = true then say '.'.green: else say 'x'.red:
+)
+
+# Test Iterables index access
+$array << [1,2,3]
+$array[1] << 4
+$array[last] << 5
+$array[next] << 6
+
+$string << 'foobar'
+$string[1] << 'X'
+$string[last] << 'Z'
+$string[next] << 'A'
+
+$int << 66
+$int[1] << 1
+$int[last] << 2
+$int[next] << 3
+
+$indexAccessTests << [
+    $array = [4,2,5,6],
+    $array[1] = 4,
+    $array[first] = 4,
+    $array[last] = 6,
+    $array[2,3] = [2,5],
+    $array[1..3] = [4,2,5],
+    $array[2..] = [2,5,6],
+    $array[..3] = [4,2,5],
+    $string = 'XoobaZA',
+    $string[1] = 'X',
+    $string[first] = 'X',
+    $string[last] = 'A',
+    $string[2,3] = 'oo',
+    $string[1..4] = 'Xoob',
+    $string[2..] = 'oobaZA',
+    $string[..3] = 'Xoo',
+
+    $int = 123,
+    $int[1] = 1,
+    $int[first] = 1,
+    $int[last] = 3,
+    $int[2,3] = 23,
+    $int[1..3] = 123,
+    $int[2..] = 23,
+    $int[..3] = 123,
+
+    # Access index can be an expression
+    [10, 20][if 1=1 then 1 else 2] = 10,
+    'foo'[if 1=1 then 1 else 2] = 'f'
+]
+(each $indexAccessTests as $test
+  if $test = true then say '.'.green: else say 'x'.red:
+)

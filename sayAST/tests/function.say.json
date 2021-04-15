@@ -1,0 +1,582 @@
+{
+  "type" : "Program",
+  "name" : "default",
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "varInScope"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "!"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "fullName"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "@first"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "@middle"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "@last"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Assignment",
+        "object" : {
+          "type" : "IndexAccess",
+          "object" : {
+            "type" : "PropertyAccess",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "this"
+            },
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "bucket"
+            }
+          },
+          "indexes" : [ {
+            "type" : "Str",
+            "value" : "next"
+          } ],
+          "range" : null,
+          "start" : null,
+          "end" : null
+        },
+        "expression" : {
+          "type" : "Str",
+          "value" : "foo"
+        }
+      }, {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "@first @middle @last varInScope"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "helloer"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "name"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Str",
+          "value" : "Hello name"
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "butler"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "greeter"
+        }
+      }, {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "name"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Infix",
+          "left" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "greeter"
+            },
+            "args" : [ {
+              "type" : "Identifier",
+              "id" : "name"
+            } ]
+          },
+          "operator" : "&",
+          "right" : {
+            "type" : "Str",
+            "value" : " Do you want tea?"
+          }
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "adder"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "a"
+        }
+      } ],
+      "body" : [ {
+        "type" : "Return",
+        "expression" : {
+          "type" : "Function",
+          "params" : [ {
+            "type" : "FunctionParam",
+            "defaultValue" : null,
+            "identifier" : {
+              "type" : "Identifier",
+              "id" : "b"
+            }
+          } ],
+          "body" : [ {
+            "type" : "Return",
+            "expression" : {
+              "type" : "Infix",
+              "left" : {
+                "type" : "Identifier",
+                "id" : "a"
+              },
+              "operator" : "+",
+              "right" : {
+                "type" : "Identifier",
+                "id" : "b"
+              }
+            }
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "addTo2"
+    },
+    "expression" : {
+      "type" : "FunctionCall",
+      "object" : {
+        "type" : "Identifier",
+        "id" : "adder"
+      },
+      "args" : [ {
+        "type" : "Int",
+        "value" : 2
+      } ]
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "result"
+    },
+    "expression" : {
+      "type" : "Str",
+      "value" : "martin luther king !"
+    }
+  }, {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "$functionTests"
+    },
+    "expression" : {
+      "type" : "Array",
+      "range" : null,
+      "infinite" : null,
+      "start" : null,
+      "end" : null,
+      "values" : [ {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "fullName"
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "martin"
+          }, {
+            "type" : "Str",
+            "value" : "luther"
+          }, {
+            "type" : "Str",
+            "value" : "king"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "Identifier",
+              "id" : "fullName"
+            },
+            "args" : [ {
+              "type" : "Str",
+              "value" : "martin"
+            } ]
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "luther"
+          }, {
+            "type" : "Str",
+            "value" : "king"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "FunctionCall",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "fullName"
+              },
+              "args" : [ {
+                "type" : "Str",
+                "value" : "martin"
+              } ]
+            },
+            "args" : [ {
+              "type" : "Str",
+              "value" : "luther"
+            } ]
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "king"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "FunctionCall",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "fullName"
+              },
+              "args" : [ {
+                "type" : "ArgPlaceholder"
+              }, {
+                "type" : "ArgPlaceholder"
+              }, {
+                "type" : "Str",
+                "value" : "king"
+              } ]
+            },
+            "args" : [ {
+              "type" : "ArgPlaceholder"
+            }, {
+              "type" : "Str",
+              "value" : "luther"
+            } ]
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "martin"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "FunctionCall",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "fullName"
+              },
+              "args" : [ {
+                "type" : "ArgPlaceholder"
+              }, {
+                "type" : "ArgPlaceholder"
+              }, {
+                "type" : "Str",
+                "value" : "king"
+              } ]
+            },
+            "args" : [ {
+              "type" : "Str",
+              "value" : "martin"
+            } ]
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "luther"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "FunctionCall",
+            "object" : {
+              "type" : "FunctionCall",
+              "object" : {
+                "type" : "Identifier",
+                "id" : "fullName"
+              },
+              "args" : [ {
+                "type" : "Str",
+                "value" : "martin"
+              } ]
+            },
+            "args" : [ {
+              "type" : "ArgPlaceholder"
+            }, {
+              "type" : "Str",
+              "value" : "king"
+            } ]
+          },
+          "args" : [ {
+            "type" : "Str",
+            "value" : "luther"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Identifier",
+          "id" : "result"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "PropertyAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "fullName"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "invocationCount"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 6
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "PropertyAccess",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "fullName"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "bucket"
+          }
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Array",
+          "range" : null,
+          "infinite" : null,
+          "start" : null,
+          "end" : null,
+          "values" : [ {
+            "type" : "Str",
+            "value" : "foo"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          }, {
+            "type" : "Str",
+            "value" : "foo"
+          } ]
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "butler"
+          },
+          "args" : [ {
+            "type" : "Identifier",
+            "id" : "helloer"
+          }, {
+            "type" : "Str",
+            "value" : "main.java.nikos"
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Str",
+          "value" : "Hello main.java.nikos Do you want tea?"
+        }
+      }, {
+        "type" : "Infix",
+        "left" : {
+          "type" : "FunctionCall",
+          "object" : {
+            "type" : "Identifier",
+            "id" : "addTo2"
+          },
+          "args" : [ {
+            "type" : "Int",
+            "value" : 4
+          } ]
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Int",
+          "value" : 6
+        }
+      } ]
+    }
+  }, {
+    "type" : "Each",
+    "iterable" : {
+      "type" : "Identifier",
+      "id" : "$functionTests"
+    },
+    "valueAlias" : {
+      "type" : "Identifier",
+      "id" : "$test"
+    },
+    "keyAlias" : null,
+    "body" : [ {
+      "type" : "If",
+      "test" : {
+        "type" : "Infix",
+        "left" : {
+          "type" : "Identifier",
+          "id" : "$test"
+        },
+        "operator" : "=",
+        "right" : {
+          "type" : "Bool",
+          "value" : true
+        }
+      },
+      "thenStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "."
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "green"
+          },
+          "args" : [ ]
+        }
+      } ],
+      "elseStatements" : [ {
+        "type" : "Say",
+        "expression" : {
+          "type" : "MethodCall",
+          "object" : {
+            "type" : "Str",
+            "value" : "x"
+          },
+          "identifier" : {
+            "type" : "Identifier",
+            "id" : "red"
+          },
+          "args" : [ ]
+        }
+      } ]
+    } ]
+  } ]
+}
