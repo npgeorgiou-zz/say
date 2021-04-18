@@ -1,0 +1,7 @@
+is_leap << (year ->
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+)

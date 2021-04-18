@@ -12,6 +12,16 @@ services:
       - ./sayAST/:/home/parser/output
     command: "bash watch.sh"
     tty: true
+  parser-generator:
+    build:
+      context: .
+      dockerfile: parser-generator/Dockerfile
+    working_dir: /home/parser-generator
+    volumes:
+      - ./parser-generator/:/home/parser-generator
+#      - ./parser/:/home/parser-generator/parser
+    command: "tail -f /dev/null"
+    tty: true
   transpiler:
     build:
       context: .
