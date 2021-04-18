@@ -16,8 +16,6 @@ use Antlr\Antlr4\Runtime\Tree\ParseTreeListener;
 use Antlr\Antlr4\Runtime\Tree\ParseTreeWalker;
 use Antlr\Antlr4\Runtime\Tree\TerminalNode;
 
-ini_set('memory_limit', '-1');
-
 final class Visitor extends \SayParserBaseVisitor {
     public function visitTop(Context\TopContext $context) {
         $program = (object)[
