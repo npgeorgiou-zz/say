@@ -36,6 +36,12 @@
 #[1,2,3,4,5].reduce($, acc -> $ + acc, 0)
 
 
-
+is_leap << (year ->
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+    callMe:[1]
+)
 
 

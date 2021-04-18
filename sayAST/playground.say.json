@@ -1,5 +1,73 @@
 {
   "type" : "Program",
   "name" : "default",
-  "statements" : [ ]
+  "statements" : [ {
+    "type" : "Assignment",
+    "object" : {
+      "type" : "Identifier",
+      "id" : "is_leap"
+    },
+    "expression" : {
+      "type" : "Function",
+      "params" : [ {
+        "type" : "FunctionParam",
+        "defaultValue" : null,
+        "identifier" : {
+          "type" : "Identifier",
+          "id" : "year"
+        }
+      } ],
+      "body" : [ {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "callMe"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 1
+        } ]
+      }, {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "callMe"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 1
+        } ]
+      }, {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "callMe"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 1
+        } ]
+      }, {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "callMe"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 1
+        } ]
+      }, {
+        "type" : "FunctionCall",
+        "object" : {
+          "type" : "Identifier",
+          "id" : "callMe"
+        },
+        "args" : [ {
+          "type" : "Int",
+          "value" : 1
+        } ]
+      } ]
+    }
+  } ]
 }
