@@ -4,7 +4,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 spl_autoload_register(function ($class) {
-    require_once ucfirst($class) . '.php';
+    require_once 'build/' . ucfirst($class) . '.php';
 });
 
 use Antlr\Antlr4\Runtime\CommonTokenStream;

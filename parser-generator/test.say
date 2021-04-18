@@ -1,3 +1,4 @@
+# The more callMe exist in the function body, the slower parsing becomes, until it runs out of memory.
 is_leap << (year ->
     callMe:[1]
     callMe:[1]
@@ -5,3 +6,10 @@ is_leap << (year ->
     callMe:[1]
     callMe:[1]
 )
+
+# Uncomment below and comment function above, to see how it now parsed without problem.
+#    callMe:[1]
+#    callMe:[1]
+#    callMe:[1]
+#    callMe:[1]
+#    callMe:[1]
